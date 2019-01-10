@@ -19,6 +19,15 @@ final class CommandFailedWrapperTest extends TestCase
         $this->middleware = new CommandFailedWrapper();
     }
 
+    public function testReturnsNextMiddlewareResultIfNoExceptionOccured()
+    {
+        $nextMiddleware = static function() {
+            return 'foo';
+        };
+
+        self::assertEquals('foo', $this->middleware->execute(new \stdClass(), $nextMiddleware));
+    }
+
     public function testWrapsAnyExceptionInCommandFailedException()
     {
         $originalException = new \RuntimeException('To be wrapped', 123);
