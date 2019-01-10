@@ -17,17 +17,6 @@ pipeline {
         }
       }
     }
-    stage('Cache') {
-      agent {
-        dockerfile {
-          dir 'docker/php'
-          reuseNode true
-        }
-      }
-      steps {
-        sh 'bin/console cache:warmup'
-      }
-    }
     stage('Test: Unit') {
       agent {
         dockerfile {
