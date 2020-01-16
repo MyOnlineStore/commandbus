@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace MyOnlineStore\CommandBus\Tests\Infrastructure\League\Tactician;
 
+use League\Tactician\CommandBus as TacticianCommandBus;
 use MyOnlineStore\CommandBus\Infrastructure\League\Tactician\CommandBus;
 use PHPUnit\Framework\TestCase;
-use League\Tactician\CommandBus as TacticianCommandBus;
 
 final class CommandBusTest extends TestCase
 {

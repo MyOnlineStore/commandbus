@@ -15,13 +15,12 @@
         }
     },
     "require": {
-        "php": "^7.0.0",
+        "php": "^7.0.33",
         "league/tactician": "^1.0"
     },
     "require-dev": {
-        "escapestudios/symfony2-coding-standard": "^3.4",
-        "phpunit/phpunit": "^6.5",
-        "squizlabs/php_codesniffer": "^3.2"
+        "myonlinestore/coding-standard": "^1.0",
+        "phpunit/phpunit": "^6.5"
     },
     "config": {
         "vendor-dir": "vendor",
@@ -30,7 +29,7 @@
         },
         "sort-packages": true,
         "platform": {
-            "php": "7.0.25"
+            "php": "7.0.33"
         }
     }
 }
