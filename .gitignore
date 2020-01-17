@@ -1,4 +1,5 @@
 /.idea
 /.DS_Store
+/.phpcs-cache
 /vendor
 /composer.lock

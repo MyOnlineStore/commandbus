@@ -13,9 +13,6 @@ final class CommandBus implements CommandBusInterface
      */
     private $commandBus;
 
-    /**
-     * @param TacticianCommandBus $commandBus
-     */
     public function __construct(TacticianCommandBus $commandBus)
     {
         $this->commandBus = $commandBus;
