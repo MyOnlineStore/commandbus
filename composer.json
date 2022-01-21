@@ -15,21 +15,23 @@
         }
     },
     "require": {
-        "php": "^7.0.33",
-        "league/tactician": "^1.0"
+        "php": "^7.4 | ^8.0",
+        "league/tactician": "^1.1"
     },
     "require-dev": {
-        "myonlinestore/coding-standard": "^1.0",
-        "phpunit/phpunit": "^6.5"
+        "myonlinestore/coding-standard": "^3.1",
+        "myonlinestore/php-devtools": "^0.2",
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.18"
     },
     "config": {
-        "vendor-dir": "vendor",
         "preferred-install": {
             "*": "dist"
         },
         "sort-packages": true,
-        "platform": {
-            "php": "7.0.33"
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }

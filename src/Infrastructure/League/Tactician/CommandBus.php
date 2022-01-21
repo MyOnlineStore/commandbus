@@ -8,10 +8,7 @@ use MyOnlineStore\CommandBus\Application\CommandBusInterface;
 
 final class CommandBus implements CommandBusInterface
 {
-    /**
-     * @var TacticianCommandBus
-     */
-    private $commandBus;
+    private TacticianCommandBus $commandBus;
 
     public function __construct(TacticianCommandBus $commandBus)
     {
@@ -21,7 +18,7 @@ final class CommandBus implements CommandBusInterface
     /**
      * @inheritdoc
      */
-    public function handle($command)
+    public function handle(object $command)
     {
         return $this->commandBus->handle($command);
     }

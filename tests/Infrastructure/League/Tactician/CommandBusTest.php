@@ -5,28 +5,23 @@ namespace MyOnlineStore\CommandBus\Tests\Infrastructure\League\Tactician;
 
 use League\Tactician\CommandBus as TacticianCommandBus;
 use MyOnlineStore\CommandBus\Infrastructure\League\Tactician\CommandBus;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 final class CommandBusTest extends TestCase
 {
-    /**
-     * @var TacticianCommandBus
-     */
-    private $tacticianCommandBus;
+    /** @var TacticianCommandBus&MockObject */
+    private TacticianCommandBus $tacticianCommandBus;
+    private CommandBus $commandBus;
 
-    /**
-     * @var CommandBus
-     */
-    private $commandBus;
-
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->tacticianCommandBus = $this->createMock(TacticianCommandBus::class);
 
         $this->commandBus = new CommandBus($this->tacticianCommandBus);
     }
 
-    public function testWillThrowOnTheBus()
+    public function testWillThrowOnTheBus(): void
     {
         $command = new \stdClass();
 
