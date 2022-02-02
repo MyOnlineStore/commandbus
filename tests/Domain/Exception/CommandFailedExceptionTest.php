@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 final class CommandFailedExceptionTest extends TestCase
 {
-    public function testWrap()
+    public function testWrap(): void
     {
         $commandFailed = CommandFailedException::wrap(
             $previous = new \Exception('Foobar', 234)

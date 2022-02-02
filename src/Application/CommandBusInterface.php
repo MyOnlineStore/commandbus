@@ -10,11 +10,10 @@ interface CommandBusInterface
     /**
      * Executes the given command and optionally returns a value
      *
-     * @param object $command
-     *
      * @return mixed
      *
      * @throws CommandFailedException
      */
-    public function handle($command);
+    // phpcs:ignore SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint
+    public function handle(object $command);
 }

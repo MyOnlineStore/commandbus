@@ -7,6 +7,6 @@ final class CommandFailedException extends \RuntimeException
 {
     public static function wrap(\Throwable $previous): self
     {
-        return new self($previous->getMessage(), $previous->getCode(), $previous);
+        return new self($previous->getMessage(), (int) $previous->getCode(), $previous);
     }
 }
