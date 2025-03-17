@@ -16,7 +16,7 @@ jobs:
                 with:
                     php-version: 7.4
                     coverage: none
-            -   uses: actions/cache@v2
+            -   uses: actions/cache@v4
                 with:
                     path: vendor
                     key: php-7.4-vendor-${{ hashFiles('**/composer.json') }}
@@ -44,7 +44,7 @@ jobs:
                 with:
                     php-version: ${{ matrix.php-version }}
                     ini-values: date.timezone=Europe/Amsterdam, assert.exception=1, zend.assertions=1
-            -   uses: actions/cache@v2
+            -   uses: actions/cache@v4
                 with:
                     path: vendor
                     key: php-${{ matrix.php-version }}-vendor-${{ hashFiles('**/composer.json') }}
